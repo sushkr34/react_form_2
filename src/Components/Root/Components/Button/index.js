@@ -1,8 +1,8 @@
 import React from "react";
-const Button =(label)=>{
+const Button =(props)=>{
   return (
     <div> 
-    <button>{label}</button>
+    <button>{props.label}</button>
     </div>
 
   );

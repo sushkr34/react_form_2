@@ -1,7 +1,16 @@
 import React from "react";
-class Cards extends React.Component {
-  render() {
-    return <div>Cards</div>;
-  }
+const Cards = (props) => {
+  return (
+    <div>
+      <label
+        // style={{
+        //   display: { horizontalAlign },
+        //   verticalAlign: { verticalAlign }
+        // }}
+      >{props.label}
+      </label>
+    </div>
+
+  )
 }
 export default Cards;

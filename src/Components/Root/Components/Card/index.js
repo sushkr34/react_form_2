@@ -1,8 +1,8 @@
 import React from "react";
-const Card =({label,horozintalAlign})=>{
-  console.log(label,"label")
+const Card =(props)=>{
+  
   return (
-    <label>{label}</label>
+    <label>{props.label}</label>
 
   );
 }

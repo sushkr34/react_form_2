@@ -17,7 +17,7 @@ class Flexi extends React.Component {
                 {items.map((el) => {
                     if (el.type === "Header") {
                         if (el.children){
-                            return ( <Flexi congif={el.props}/>)
+                            return ( <Flexi config={el.props}/>)
                         }
                         return (
                             // <Header
@@ -30,7 +30,7 @@ class Flexi extends React.Component {
                     }
                     if (el.type === "Card") {
                         if (el.children){
-                            return ( <Flexi congif={el.props}/>)
+                            return ( <Flexi config={el.props}/>)
                         }
                         return (
                             <Card
@@ -42,13 +42,13 @@ class Flexi extends React.Component {
 
                         return (
                             <Button
-                                label={el.props.label}
+                                label={el.label}
                             />
                         )
                     }
                     if (el.type === "Cards") {
                         if (el.children){
-                            return ( <Flexi congif={el.props}/>)
+                            return ( <Flexi config={el.props}/>)
                         }
 
                         return (
@@ -61,7 +61,7 @@ class Flexi extends React.Component {
 
                         return (
                             <RadioGroup
-                                label={el.props.label}
+                                label={el.label}
                             />
                         )
                     }
