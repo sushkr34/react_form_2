@@ -11,7 +11,7 @@ const flexConfigFoRegistration= {
           {
             type: "Card",
             props: {
-              color: "grey",
+              backgroundColor: "grey",
               horizontalAlign: "left"
             },
             children: {

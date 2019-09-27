@@ -1,6 +1,6 @@
 import React from "react";
 
-const hoc = () => Component => {
+const hoc = (config) => Component => {
   class HocComponent extends React.Component {
     state = {
       dataChange: {}
@@ -212,7 +212,7 @@ const hoc = () => Component => {
       console.log(this.state.dataChange);
       return (
         <Component
-          config={this.config}
+          config={config}
           handleChange={this.handleChange}
           onFlexiSubmit={this.onFlexiSubmit}
           {...this.props}

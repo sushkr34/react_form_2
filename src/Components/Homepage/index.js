@@ -7,7 +7,7 @@ class HomePage extends React.Component {
     return (
       <div>
         <Flexi
-          config={this.config}
+          config={this.props.config}
           handleChange={this.props.handleChange}
           onFlexiSubmit={this.props.onFlexiSubmit}
         />
