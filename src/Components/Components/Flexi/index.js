@@ -5,6 +5,7 @@ import Cards from '../Cards'
 import RadioGroup from '../RadioGroup'
 import Header from '../Header'
 import TextField from '../TextField'
+
 const Flexi =({config,handleChange, onFlexiSubmit })=>{
     let items = config.items;
 
@@ -14,18 +15,20 @@ const Flexi =({config,handleChange, onFlexiSubmit })=>{
          });
      };
     
-     console.log(getChild,"get")
+     
      const displayField = e =>{
+         let child=[];
          if(e.children){
-             return getChild(e.children.items);
-         }else {
-             let type = e.type;
-             switch (type){
+             child =getChild(e.children.items);
+         }
+             
+             switch (e.type){
                  case "Card":
-                     return <Card props ={e.props} />;
+                     
+                     return <Card props ={e.props} child={child} />;
                        
                 case "Cards" :
-                    return <Cards props = {e.props}/>;
+                        return <Cards props = {e.props}/>;
                         
                 case "Header" :
                     return <Header props = {e.props}/>;
@@ -39,7 +42,7 @@ const Flexi =({config,handleChange, onFlexiSubmit })=>{
                 default :
                     return null;
              }
-         }
+         
      }
      return <div>{getChild (items )}</div>
 }

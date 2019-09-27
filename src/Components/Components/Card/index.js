@@ -1,11 +1,13 @@
 import React from "react";
 
-const Card = ({ props }) => {
+const Card = ({ props,child }) => {
   let styleObject = props;
-
+  console.log(props);
+  
   return (
-    <div style={styleObject}>
+    <div style={props}>
       <label>{props.label}</label>
+      {child}
     </div>
   );
 };
