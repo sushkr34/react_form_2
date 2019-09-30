@@ -1,10 +1,10 @@
 import React from "react";
 
 const Header = ({ props }) => {
-  let styleObj = props;
+  
 
   return (
-    <div style={styleObj}>
+    <div style={props}>
       <label>{props.label}</label>
     </div>
   );

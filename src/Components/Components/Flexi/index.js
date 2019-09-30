@@ -21,16 +21,16 @@ const Flexi =({config,handleChange, onFlexiSubmit })=>{
          if(e.children){
              child =getChild(e.children.items);
          }
-         let Components = require ('../${e.type}').default
+         let Components = require (`../${e.type}`).default;
          return (
-             <Components
+             <Components 
              props={e.props}
              child={child}
-             handleChange={handleChange}
              onFlexiSubmit={onFlexiSubmit}
+             handleChange={handleChange}
              />
-
          )
+         
              
             //  switch (e.type){
             //      case "Card":

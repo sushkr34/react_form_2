@@ -1,8 +1,8 @@
 import React from "react";
 
 const Card = ({ props,child }) => {
-  let styleObject = props;
-  console.log(props);
+  
+  // console.log(props);
   
   return (
     <div style={props}>

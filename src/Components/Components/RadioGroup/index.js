@@ -1,10 +1,10 @@
 import React from "react";
 
 const RadioGroup = ({ props, handleChange }) => {
-  let styleObj = props;
+  
 
   return (
-    <div style={styleObj}>
+    <div style={props}>
       <label> {props.label}: </label>
       {props.options.map(el => (
         <span>
